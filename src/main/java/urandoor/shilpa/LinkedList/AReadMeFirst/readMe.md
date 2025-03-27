@@ -165,6 +165,11 @@ first allocate memory to the last node
 
 
 
+## **Doubly Linked list**
+
+![img_19.png](img_19.png)
+
+
 
 
 
