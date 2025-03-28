@@ -1,4 +1,7 @@
-package urandoor.shilpa.LinkedList.SinglyLinkedList;
+package main.java.urandoor.shilpa.LinkedList.SinglyLinkedList;
+import urandoor.shilpa.LinkedList.SinglyLinkedList.SLLNode;
+
+import java.util.LinkedList;
 
 public class SLLInsertAtPosition {
 

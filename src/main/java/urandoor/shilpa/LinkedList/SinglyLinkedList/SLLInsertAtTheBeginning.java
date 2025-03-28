@@ -1,6 +1,6 @@
 package urandoor.shilpa.LinkedList.SinglyLinkedList;
 
-
+import urandoor.shilpa.LinkedList.SinglyLinkedList.SLLNode;
 public class SLLInsertAtTheBeginning {
 
     static SLLNode insertAtBeginning(SLLNode head, int x)

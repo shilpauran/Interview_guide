@@ -1,5 +1,6 @@
 package urandoor.shilpa.LinkedList.SinglyLinkedList;
 
+import urandoor.shilpa.LinkedList.SinglyLinkedList.SLLNode;
 public class SLLTraversal {
 
     // **1. Linked List ని Traverse చేయడం (ప్రింట్ చేయడం)**

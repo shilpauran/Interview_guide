@@ -1,5 +1,5 @@
 package urandoor.shilpa.LinkedList.SinglyLinkedList;
-
+import urandoor.shilpa.LinkedList.SinglyLinkedList.SLLNode;
 public class SLLSearch {
 
     int search(SLLNode head, int data) {

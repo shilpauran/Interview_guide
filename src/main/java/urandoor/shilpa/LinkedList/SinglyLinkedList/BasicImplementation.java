@@ -1,5 +1,6 @@
 package urandoor.shilpa.LinkedList.SinglyLinkedList;
 
+import urandoor.shilpa.LinkedList.SinglyLinkedList.SLLNode;
 public class BasicImplementation {
 
     public static void main(String[] args)

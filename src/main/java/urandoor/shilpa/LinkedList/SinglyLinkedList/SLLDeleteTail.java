@@ -1,5 +1,7 @@
 package urandoor.shilpa.LinkedList.SinglyLinkedList;
 
+import urandoor.shilpa.LinkedList.SinglyLinkedList.SLLNode;
+
 public class SLLDeleteTail {
 
     SLLNode deleteLast(SLLNode head)

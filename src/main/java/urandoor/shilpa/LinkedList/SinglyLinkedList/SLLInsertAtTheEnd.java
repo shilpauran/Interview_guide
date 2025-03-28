@@ -1,5 +1,5 @@
 package urandoor.shilpa.LinkedList.SinglyLinkedList;
-
+import urandoor.shilpa.LinkedList.SinglyLinkedList.SLLNode;
 public class SLLInsertAtTheEnd {
 
     SLLNode insertAtEnd(SLLNode head, int x)
