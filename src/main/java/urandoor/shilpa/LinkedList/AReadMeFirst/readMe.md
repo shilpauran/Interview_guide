@@ -464,6 +464,155 @@ pointer.next = pointer.next.next;
 
 all even nodes should come first in the same order and then odd nodes should come next
 
+![img_68.png](img_68.png)
+
+https://www.geeksforgeeks.org/segregate-even-and-odd-elements-in-a-linked-list/
+
+[link to program ](../ZAdditionalProblems/SegregateEvenandOdd.java)
+
+another variation based on indices : https://leetcode.com/problems/odd-even-linked-list/description/
+
+
+## **Find the intersection point of two linked lists :**
+
+There will be 2 linked lists and they will have a common intersection point. we need to find out. in the below example
+its 10.
+
+![img_69.png](img_69.png)
+
+![img_70.png](img_70.png) 
+
+Using Two Pointer Technique – O(m + n) Time and O(1) Space
+
+[link to program ](../ZAdditionalProblems/FindIntersectionPoint.java)
+
+Geeks for Geeks Explanation :: https://www.geeksforgeeks.org/write-a-function-to-get-the-intersection-point-of-two-linked-lists/
+
+leetcode : https://leetcode.com/problems/intersection-of-two-linked-lists/description/
+
+
+## **PairWise Swapping of Nodes in LL**
+
+![img_71.png](img_71.png)
+
+first node should be swapped with 2nd node, 3rd node should be swapped with 4th etc. 
+if there are odd nodes then the left over one does not need to be swapped
+
+[link to program ](../ZAdditionalProblems/PairwiseSwapNodesInLL.java)
+
+
+## **Clone a linked list with Random Pointer**
+
+we use hashing
+
+![img_73.png](img_73.png)
+
+
+![img_72.png](img_72.png)
+
+
+we try to insert between the nodes instead of using hashing.
+this is O(1) operation and over all time complexity is O(n) 
+
+steps : 
+1. insert cloned nodes alternatively
+2. connect the cloned nodes with random
+3. separate original and clone nodes
+
+![img_74.png](img_74.png)
+
+![img_75.png](img_75.png)
+
+![img_76.png](img_76.png)
+
+![img_77.png](img_77.png)
+
+![img_78.png](img_78.png)
+
+https://www.geeksforgeeks.org/a-linked-list-with-next-and-arbit-pointer/
+
+![img_79.png](img_79.png)
+
+## **LRU Cache Design**
+
+Least Recently Used - LRU
+concept that LRU uses is called temporal locality
+![img_80.png](img_80.png)
+
+always a least accessed item will be removed from the cache to give place for a new accessed item.
+
+![img_81.png](img_81.png)
+
+Efficient way is to use Hashing with Doubly linked list
+
+![img_82.png](img_82.png)
+
+most recently item is at the front, and least recently used item is on the tail
+
+
+## **Merge Two sorted Linked Lists**
+
+![img_83.png](img_83.png)
+
+![img_84.png](img_84.png)
+the key here is to maintain tail pointer along with head pointer
+and move a and b based on which ever is smaller
+
+![img_85.png](img_85.png)
+
+steps : 
+1. check if any of the lists are null then return the other list
+2. find the head : if a < b then head = a and tail = a and then we move a i.e a = a.next
+3. now we keep moving and doing comparision if a< b then we attach the tail , tail.next = a and we move the tail = a and we also move a 
+4. once any of the a and b are null, it comes out of the loop
+5. then if a is null , we just attach the remaining list at the end. i.e tail.next = b and viceversa
+
+[link to program ](../ZAdditionalProblems/MergeTwoSortedLists.java)
+
+https://leetcode.com/problems/merge-two-sorted-lists/submissions/1590325803/?envType=study-plan-v2&envId=top-interview-150
+
+
+
+## **check if the given linked list is palindrome or not**
+
+using stack 
+
+![img_87.png](img_87.png)
+
+![img_86.png](img_86.png)
+
+time complexity is tita(n)
+and auxillary space = tita(n)
+
+a better approach is 
+find the middle and reverse the 2nd half and start comparing the first node in 1st half to the 1st node is second half and move on if matched
+if do not match its not a palindrome
+![img_88.png](img_88.png)
+
+step 1 : find the middle node using slow and fast pointer
+step 2 : reverse the 2nd half
+step 3 : comparing the elements
+
+![img_89.png](img_89.png)
+
+https://leetcode.com/problems/palindrome-linked-list/description/
+
+
+
+
+
+
+
+Problems to master
+
+lru cache design
+clone linked list with random pointer
+pairwise swipe nodes
+
+
+
+
+
 
 
 
