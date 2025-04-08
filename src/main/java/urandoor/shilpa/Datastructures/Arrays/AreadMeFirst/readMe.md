@@ -562,6 +562,185 @@ next find minimum sum subarray
 and the result is max of maxSum , totalSum-minSum
 
 
+## **Majority Element in an Array**
+
+In a given array, if an element appears more than half of the size of array, then its majority element.
+i.e if n =6 , then an element should appear more than n/2 = 3 times
+eg : {8,3,4,8,8} => 8 appears more than 5/2 times
+{3,7,4,7,7,5} => 7 appears exactly 3 times its not majority
+This works on algorithm called
+
+#### **Moore's Voting Algorithm**
+
+which states that we assume it is first element which repeats and store its index in result variable.
+we begin with 2nd element, we check if result element and 2nd element are equal.
+if so , we increment the count and if not , we decrement the count
+when count reaches 0 then we make the result element as current element, and reset the count to 1.
+
+in the next phase, we just simply traverse through the list and confirm if the result element is the actual majority element
+
+if no majority element, then we return -1;
+
+its not always mandatory for this algorithm to return the 1st found index of majority element. it can return the middle one as well.
+
+![img_27.png](img_27.png)
+
+[link to the program](../classes/MajorityElement.java)
+
+https://leetcode.com/problems/majority-element/description/
+
+
+### **Minimum Consecutive Flips in a binary array**
+
+
+![img_30.png](img_30.png)
+
+https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Arrays/video/MTU4Ng%3D%3D
+
+![img_28.png](img_28.png)
+
+![img_29.png](img_29.png)
+
+**Explanation :** 
+
+the concept is that since its a binary array, the difference between no.of 0 group flips and 1 group flips are either same or 1.
+
+eg : {1,1,0,1,1,0} 
+here 1 group flips = 2
+0 group flips = 2
+so difference is 0 which is same.
+
+eg : {1,1,1,0,0,1,1,1,1}
+0 group flips = 1
+1 group flips = 2
+difference is 1.
+
+also there are only 2 cases,  first element and last element are same or its different(different as 2nd group)
+in above example, 110110 - last element is same as 2nd group
+
+logic : 
+
+we keep checking where the elements does not match. we never flip the 1st group. we always find the starting point and 
+ending point of 2nd group.
+
+eg : {1,1,0,1,1,0} 
+
+we check the point where a[i] and a[i-1] are not same. and check if that group is not same as first group. because we never flip the first group.
+if its a different group then thats the starting point.
+
+next we a[i] and a[i-1] are not same but a[i] is same as first group element, thats the ending point
+
+there could be an edge case, where last group needs a closure, so at the end we check if a[n-1] != a[0] then we just close it
+
+[link to the program](../classes/MinimumConsFlip.java)
+
+## **Sliding Window Approach**
+
+![img_33.png](img_33.png)
+
+![img_31.png](img_31.png)
+
+![img_32.png](img_32.png)
+
+just slide the window as needed.
+
+[link to the program](../classes/SlidingWindow.java)
+
+## **SubArray with given Sum**
+
+![img_34.png](img_34.png)
+
+![img_35.png](img_35.png)
+
+[link to the program](../classes/SubArrayWithGivenSum.java)
+
+## **Prefix Sum**
+
+![img_36.png](img_36.png)
+
+![img_37.png](img_37.png)
+
+We will be pre-processing the array inorder to achieve the time complexity as O(1)
+
+a = [2,8,3,9,6,5,4]
+in pre-processing we find the sum of subarray from  0 to k , where k is incremental index
+
+i.e pSum = [2, 10,13,22,33,37]
+i.e from 1st element to the current element what is the sum
+if we know this, then getSum(1,2)
+will be 
+pSum[2] - pSum[1-1] => 13 - 2 = 11 which is true.
+in case getSum(0,2) -> then it is just pSum[2] => 13
+
+thats the logic for O(1) time complexity
+
+[link to the program](../classes/PrefixSum.java)
+
+## **Equilibrium Point**
+
+A point in array where left and right sum of that point are same.
+eg : {3,4,8,-9,9,7} . equilibrium point is 8, because 3+4 = 7 and -9+9+7 = 7
+
+naive solution is to have multiple loops to find the left sum and right sum.
+
+next best solution is to compute prefixSum and SuffixSum.
+But the efficient solution is: 
+1. find the total sum
+2. for every element, calculate the right sum ( total - current element)
+3. compare left and right sum - if same then return true
+4. if not, add the current element to left sum. i.e update the left sum
+
+![img_38.png](img_38.png)
+
+![img_39.png](img_39.png)
+
+![img_40.png](img_40.png)
+
+[link to the program](../classes/EquilibriumPoint.java)
+
+https://leetcode.com/problems/find-pivot-index/
+
+## **Maximum Appearing element in given arrays**
+
+given an array a = {1,2,3,4,5}; and b = {2,3,4,5,6,7,8}; find the most appearing element
+array elements are < 100 and >= 0
+
+[link to the program](../classes/MaxAppearingInGivenArray.java)
+
+## **Maximum Appearing element in the ranges of arrays.**
+
+Given left (starting ) and right (ending) values in of an array , we need to calculate which element appears most in the formed ranges
+left = [1,2,5,3] right = [5,8,7,6] left <= right and numbers are < 100 and >= 0
+
+here ranges are  [1,2,3,4,5] , [2,3,4,5,6,7,8] , [5,6,7] , [3,4,5,6]
+here most appearing element is 5
+
+![img_41.png](img_41.png)
+
+we first mark the starting and ending of the range to 1 and -1 respectively.
+once that is done, 
+then we find out the prefix sum
+and in that which ever is the highest thats the max sum
+
+![img_43.png](img_43.png)
+
+
+![img_42.png](img_42.png)
+
+[link to the program](../classes/MaxAppearingInRange.java)
+
+
+
+
+
+
+
+
+
+
+   
+
+
 
 
 
