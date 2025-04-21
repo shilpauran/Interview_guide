@@ -669,6 +669,12 @@ https://www.geeksforgeeks.org/deployment-diagram-unified-modeling-languageuml/
 
 
 
+![img_19.png](img_19.png)
+
+
+
+
+
 
 
 
